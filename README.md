@@ -16,20 +16,20 @@
   &emsp;• Performed YCbCr on the background and the
   current frame.<br>
   &emsp;• <b>Gaussian mixture model</b> is used to perform BGS. It assumes that the overall intensity at any pixel at each instant <br>
-  &emsp;     is produced by a combination of background and foreground processes, and each such process can be modeled by a single<br> &emsp; Gaussian probability distribution function.<br>
+  &emsp;is produced by a combination of background and foreground processes, and each such process can be modeled<br> by a single Gaussian probability distribution function.<br>
 
 <b>B. Pre-Processing:</b><br>
   &emsp;Pre-Processing involves 2 functions:<br>
   &emsp;• Contrast Enhancement: It improves the quality of low
   light video by normalizing the difference between the
-  maximum & <br> &emsp;minimum intensities,
-   using YCbCr approach. Convert RGB to YCbCr using
+  <br> &emsp; maximum & minimum intensities,
+   using YCbCr approach. Convert RGB to YCbCr using<br> &emsp;
   “vision.ColorSpaceConverter” function.<br>
   &emsp;• Noise Reduction: Reduces the white noise present in an input
   frame by smoothing the frame.<br>
   
 <b>C. Foreground analysis:</b><br>
-  &emsp;This system has a separate foreground analysis stage that takes the noisy foreground mask produced by the BGS module as its input<br>&emsp; and
+  &emsp;This system has a separate foreground analysis stage that takes the noisy foreground mask produced by the BGS <br> &emsp;module as its input and
   removes all the false and uninteresting foreground pixels
   from it.<br>&emsp; This can be done by NCC (Normalized Cross-Correlation) <br>
  
@@ -39,7 +39,7 @@
   function.<br>
   &emsp;• This function i.e. [Area, Centroid, BBox] =
   step(hBlob, Segmented); gives area , centroid and
-  Boundary box for a particular blob,<br>&emsp; discarding blobs
+  Boundary box for a <br> &emsp; particular blob, discarding blobs
   that are smaller than a specified threshold.
  
 <b>E. Blob Tracking:</b><br>
@@ -47,7 +47,7 @@
   with the existing blobs.<br>
    &emsp;• If the centroid position and size(criteria) of the blobs
   are in conformity, then the Hit Rate of that blob is
-  increased by 1.<br>
+  increased by <br> &emsp;1.<br>
    &emsp;• If at any instant the criteria of the blobs are not in
   conformity, then its Hit Rate is set to 0.<br>
   
